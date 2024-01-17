@@ -38,7 +38,6 @@ namespace _4RTools.Forms
             SetATKDEFWindow();
             SetMacroSwitchWindow();
             SetServerWindow();
-            SetAdvertisementWindow();
 
             TrackerSingleton.Instance().SendEvent("desktop_login", "page_view", "desktop_container_load");
         }
@@ -197,15 +196,6 @@ namespace _4RTools.Forms
             frm.FormBorderStyle = FormBorderStyle.None;
             frm.Location = new Point(350, 70);
             frm.MdiParent = this;
-            frm.Show();
-        }
-
-        public void SetAdvertisementWindow()
-        {
-            AdvertisementForm frm = new AdvertisementForm();
-            frm.FormBorderStyle = FormBorderStyle.None;
-            frm.MdiParent = this;
-            this.panelAdvertisement.Controls.Add(frm);
             frm.Show();
         }
 
